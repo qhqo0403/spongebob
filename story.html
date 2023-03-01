@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+	  <meta neme="mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <title>SPONGEBOB</title>
+		<link rel="stylesheet" href="assets/css/story.css">
+		<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+		<script>
+			$(function(){
+				$(document).on('touchstart', function(){});
+				function moving(){
+					$('.img_wrap').animate({left:'30px'}, 500);
+				}
+				moving();
+				$('.go').on('click', function(){
+					window.location.href="game.html"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section id="story">
+			<div class="content">
+				<p>넵튠왕의 왕관을 훔친<br><span>플랑크톤</span>을 잡아라!</p>
+				<div class="imgbox">
+					<div class="img_wrap"><img src="assets/img/stroy_img.png" alt="spongebob"></div>
+					<button type="button" class="go">GO</button>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

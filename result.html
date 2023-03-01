@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+	  <meta neme="mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+		<title>SPONGEBOB</title>
+		<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+		<script>
+			$(function(){
+				$(document).on('touchstart', function(){});
+				$('.again').on('click', function(){
+					window.location.href="game.html";
+				});
+			});
+		</script>
+		<style type="text/css">
+			body, section, div{ margin: 0; padding: 0; }
+			img, button{ display: block; }
+			html, body{
+				width: 100%; height: 100%;
+			}
+			#wrapper{
+				width: 100%; height: 100%;
+				background: url("img/result_bg.jpg") no-repeat center center;
+				background-size: cover;
+				overflow: hidden;
+			}
+			#wrapper>div[class*=imgbox]{
+				width: 300px; height: 290px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transform: translateX(-50%);
+				/* display: none; */
+			}
+			#wrapper>.imgbox1{
+				position: absolute; left: 50%; top: 80px;
+			}
+			#wrapper>.imgbox2{
+				position: absolute; left: 50%; top: 100px;
+			}
+			#wrapper>.imgbox3{
+				position: absolute; left: 50%; top: 120px;
+			}
+			#wrapper>div[class*=imgbox]>img{
+				margin: 0 auto;
+			}
+			#wrapper>.result{
+				width: 300px;
+				position: absolute; left: 50%; top: 45%;
+				transform: translateX(-50%);
+			}
+			#wrapper>.result>img{
+				width: 121px; height: 35px;
+				margin: 0 auto;
+			}
+			#wrapper>.result>.score{
+				margin: 15px auto;
+				font-size: 60px;
+				font-weight: bold;
+				text-align: center;
+				color: #ffde37;
+			}
+			#wrapper>.again{
+				width: 141px; height: 55px;
+				text-indent: -9999px;
+				background: url("img/again_txt.png") no-repeat center center;
+				background-size: contain;
+				border: 0;
+				position: absolute; left: 50%; top: 70%;
+				transform: translateX(-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<section id="wrapper">
+			<div class="imgbox1">
+				<img src="img/excellent_img.png" alt="">
+				<img src="img/excellent_txt.png" alt="excellent">
+			</div>
+			<div class="imgbox2">
+				<img src="img/good_img.png" alt="">
+				<img src="img/good_txt.png" alt="">
+			</div>
+			<div class="imgbox3">
+				<img src="img/lower.png" alt="">
+			</div>
+			<div class="result">
+				<img src="img/score.png" alt="score">
+				<div class="score">100</div>
+			</div>
+			<button type="button" class="again">Again</button>
+		</section>
+	</body>
+</html>
