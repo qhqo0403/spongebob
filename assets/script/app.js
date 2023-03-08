@@ -12,20 +12,22 @@ $(function(){
     let img=$('.b'+num).find('img');
     let plankton=$('.b'+num).children('.plankton');
     img.stop().fadeIn(200);
-    plankton.stop().animate({top:0}, 200);
+    plankton.stop().animate({top:0}, 300);
     clickable=true;
     // img.on('click', function(){
     // 	img.attr('src', 'img/hit.png');
     // });
     setTimeout(function(){
-      plankton.animate({'top':'126px'}, 200);
+      plankton.animate({'top':'126px'}, 300);
     }, 600);
     img.attr('src', 'assets/img/Plankton.png');
+    img.attr('dragglable', false);
   }
   timer=setInterval(randomTarget, 1000);
 
   $('.plankton>img').on('click', function(){
     $(this).attr('src', 'assets/img/hit.png');
+    $(this).attr('draggable', false);
     if(clickable){
       score++;
       $('.innerbox').find('.hit').text(score);
